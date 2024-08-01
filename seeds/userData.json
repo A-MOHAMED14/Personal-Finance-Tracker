@@ -5,7 +5,7 @@
     "password": "password123"
   },
   {
-    "username": "Jane Smith",
+    "name": "Jane Smith",
     "email": "jane.smith@hotmail.com",
     "password": "securepass"
   }
