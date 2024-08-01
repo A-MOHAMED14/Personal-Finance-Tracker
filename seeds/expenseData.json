@@ -1,0 +1,14 @@
+[
+  {
+    "amount": 200.0,
+    "category": "Groceries",
+    "date": "2024-07-02",
+    "user_id": 1
+  },
+  {
+    "amount": 100.0,
+    "category": "Utilities",
+    "date": "2024-07-10",
+    "user_id": 2
+  }
+]
