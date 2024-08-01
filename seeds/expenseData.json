@@ -2,13 +2,21 @@
   {
     "amount": 200.0,
     "category": "Groceries",
-    "date": "2024-07-02",
-    "user_id": 1
+    "date": "2024-07-02"
   },
   {
     "amount": 100.0,
     "category": "Utilities",
-    "date": "2024-07-10",
-    "user_id": 2
+    "date": "2024-07-10"
+  },
+  {
+    "amount": 150.0,
+    "category": "Transportation",
+    "date": "2024-07-05"
+  },
+  {
+    "amount": 75.0,
+    "category": "Entertainment",
+    "date": "2024-07-12"
   }
 ]
