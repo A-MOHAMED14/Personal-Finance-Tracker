@@ -1,0 +1,14 @@
+[
+  {
+    "amount": 5000.0,
+    "source": "Salary",
+    "date": "2024-07-01",
+    "user_id": 1
+  },
+  {
+    "amount": 1500.0,
+    "source": "Freelance",
+    "date": "2024-07-15",
+    "user_id": 2
+  }
+]
