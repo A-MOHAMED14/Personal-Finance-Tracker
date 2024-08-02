@@ -5,6 +5,7 @@
   --colour4: #ffffff;
   --colour5: grey;
   --colour6: #61df65;
+  --colour7: #d40000;
 }
 
 /* UNIVERSAL STYLING */
@@ -59,6 +60,18 @@ header {
   border-bottom: 5px solid var(--colour3);
 }
 
+#logout-btn {
+  border: none;
+  padding: 7px 10px;
+  font-weight: bold;
+  color: var(--colour4);
+  background-color: var(--colour2);
+  font-size: 1.5rem;
+}
+
+#logout-btn:hover {
+  border-bottom: 5px solid var(--colour3);
+}
 /* ---------------- MAIN SECTION  ---------------- */
 
 /* HOME PAGE STYLING */
@@ -215,4 +228,73 @@ span {
 
 #login-btn:hover {
   background-color: var(--colour6);
+}
+
+/* TRANSACTIONS STYLING */
+.transactions-container {
+  margin: 20px;
+}
+
+.table-name {
+  margin-bottom: 7px;
+}
+
+table {
+  width: 35%;
+  border: 1px solid black;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+th {
+  background-color: var(--colour5);
+  color: white;
+  font-size: 1.25rem;
+}
+
+td {
+  font-size: 1.1rem;
+}
+
+#in {
+  /* color: var(--colour1); */
+}
+
+#new-transaction-buttons {
+  margin: 50 0 10 20;
+}
+
+#add-income-btn,
+#add-expense-btn {
+  padding: 20px 35px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 15px 10px 0;
+  color: var(--colour4);
+}
+
+#add-income-btn {
+  background-color: var(--colour1);
+  box-shadow: 3px 3px 5px var(--colour5);
+}
+
+#add-expense-btn {
+  background-color: var(--colour7);
+  box-shadow: 3px 3px 5px var(--colour5);
+}
+
+#add-income-btn:hover {
+  background-color: var(--colour6);
+  box-shadow: 3px 3px 5px black;
+}
+
+#add-expense-btn:hover {
+  background-color: red;
+  box-shadow: 3px 3px 5px black;
 }
