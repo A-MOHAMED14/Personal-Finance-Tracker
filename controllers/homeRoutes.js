@@ -13,6 +13,11 @@ router.get("/", async (req, res) => {
 
 router.get("/signup", async (req, res) => {
   try {
+    if (req.session.logged_in) {
+      res.redirect("/dashboard");
+      return;
+    }
+
     res.render("signup");
   } catch (err) {
     res.status(500).json(err);
@@ -25,6 +30,7 @@ router.get("/login", async (req, res) => {
       res.redirect("/dashboard");
       return;
     }
+
     res.render("login");
   } catch (err) {
     res.status(500).json(err);
