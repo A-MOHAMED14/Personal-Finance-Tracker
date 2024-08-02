@@ -1,0 +1,60 @@
+:root {
+  --colour1: #4caf50;
+  --colour2: #2196f3;
+  --colour3: #ffc107;
+  --colour4: #ffffff;
+  --colour5: grey;
+  --colour6: #61df65;
+}
+
+/* UNIVERSAL STYLING */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* BODY STYLING */
+body {
+  font-size: 1.5rem;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+/* HEADER STYLING */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0px 30px 0px;
+  background-color: #2196f3;
+  box-shadow: 2px 2px 3px var(--colour5);
+}
+
+#finance-flow {
+  font-size: 3rem;
+  color: var(--colour4);
+  margin-left: 100px;
+}
+
+#nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#nav-links {
+  margin-right: 20px;
+}
+
+#nav-links a {
+  text-decoration: none;
+  padding: 7px 10px;
+  font-weight: bold;
+  color: var(--colour4);
+}
+
+#nav-links a:hover {
+  border-bottom: 5px solid var(--colour3);
+}
