@@ -1,0 +1,45 @@
+<div id="new-transaction-buttons">
+  <button id="add-income-btn">Add New Income</button>
+  <button id="add-expense-btn">Add New Expense</button>
+</div>
+
+{{#if incomes}}
+  {{#each incomes as |income|}}
+    <div class="transactions-container">
+      <h3 class="table-name">Income:</h3>
+      <table id="income-table">
+        <tr>
+          <th class="column-name">Date</th>
+          <th class="column-name">Source</th>
+          <th class="column-name">Amount</th>
+        </tr>
+        <tr>
+          <td>{{income.date}}</td>
+          <td>{{income.source}}</td>
+          <td>{{income.amount}}</td>
+        </tr>
+      </table>
+    </div>
+  {{/each}}
+{{/if}}
+
+{{#if expenses}}
+  <hr style="width: 35%; margin: 20px" />
+  {{#each expenses as |expense|}}
+    <div class="transactions-container">
+      <h3 class="table-name">Expenses:</h3>
+      <table id="expense-table">
+        <tr>
+          <th class="column-name">Date</th>
+          <th class="column-name">Category</th>
+          <th class="column-name">Amount</th>
+        </tr>
+        <tr>
+          <td>{{expense.date}}</td>
+          <td>{{expense.category}}</td>
+          <td>{{expense.amount}}</td>
+        </tr>
+      </table>
+    </div>
+  {{/each}}
+{{/if}}
