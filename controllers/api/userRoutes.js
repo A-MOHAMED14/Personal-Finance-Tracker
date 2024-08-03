@@ -1,6 +1,28 @@
 const router = require("express").Router();
 const { User, Income, Expense } = require("../../models/index.js");
 
+router.post("/newIncome", async (req, res) => {
+  const { amount, source, date } = req.body;
+  const userData = await Income.create({
+    amount,
+    source,
+    date,
+    user_id: req.session.user_id,
+  });
+
+  if (!userData) {
+    res.status(400).json({ message: "Unable to create new income record" });
+    return;
+  }
+
+  req.session.save(() => {
+    req.session.user_id = userData.id;
+    req.session.logged_in = true;
+
+    res.status(200).json({ message: "New income record created successfully" });
+  });
+});
+
 router.post("/signup", async (req, res) => {
   try {
     const userData = await User.create(req.body);
