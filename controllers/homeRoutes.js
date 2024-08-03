@@ -38,6 +38,14 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
+router.get("/income/:id", withAuth, async (req, res) => {
+  const incomeData = await Income.findByPk(req.params.id);
+
+  const income = incomeData.get({ plain: true });
+
+  res.render("updateIncome", { income, logged_in: req.session.logged_in });
+});
+
 router.get("/newIncome", withAuth, async (req, res) => {
   try {
     res.render("newincome", { logged_in: req.session.logged_in });
