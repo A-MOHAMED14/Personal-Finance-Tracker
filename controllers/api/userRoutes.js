@@ -23,6 +23,28 @@ router.post("/newIncome", async (req, res) => {
   });
 });
 
+router.post("/newExpense", async (req, res) => {
+  const { amount, category, date } = req.body;
+  const userData = await Expense.create({
+    amount,
+    category,
+    date,
+    user_id: req.session.user_id,
+  });
+
+  if (!userData) {
+    res.status(400).json({ message: "Unable to create new expense record" });
+    return;
+  }
+
+  req.session.save(() => {
+    req.session.user_id = userData.id;
+    req.session.logged_in = true;
+
+    res.status(200).json({ message: "New expense record created" });
+  });
+});
+
 router.post("/signup", async (req, res) => {
   try {
     const userData = await User.create(req.body);
