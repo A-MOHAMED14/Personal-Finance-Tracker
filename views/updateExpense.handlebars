@@ -1,0 +1,43 @@
+<div id="update-expense-container">
+  <div id="update-expense-form-container">
+    <div id="update-expense-header"><h1>Update Expense</h1></div>
+
+    <form id="update-expense-form">
+      <div id="update-expense-amount-field">
+        <label for="update-expense-amount"></label>
+        <input
+          type="text"
+          id="update-expense-amount"
+          placeholder="Amount"
+          value={{expense.amount}}
+        />
+      </div>
+
+      <div id="update-expense-category-field">
+        <label for="update-expense-category"></label>
+        <input
+          type="text"
+          id="update-expense-category"
+          placeholder="Category"
+          value={{expense.category}}
+        />
+      </div>
+
+      <div id="update-expense-date-field">
+        <label for="update-expense-date"></label>
+        <input
+          type="text"
+          id="update-expense-date"
+          placeholder="Date"
+          value={{format_date expense.date}}
+        />
+      </div>
+
+      <button type="submit" id="update-expense-btn">
+        Update Expense
+      </button>
+
+      <button id="delete-expense-btn">Delete</button>
+    </form>
+  </div>
+</div>
