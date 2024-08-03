@@ -8,7 +8,7 @@ const DisplaySelectedIncome = async (event) => {
       const response = await fetch(`/income/${incomeId}`);
 
       if (response.ok) {
-        window.location.href = `/update?income_id=${incomeId}`;
+        window.location.href = `/update/income?id=${incomeId}`;
       } else {
         alert(response.statusText);
       }
@@ -26,7 +26,7 @@ const DisplaySelectedExpense = async (event) => {
       const response = await fetch(`/expense/${expenseId}`);
 
       if (response.ok) {
-        window.location.href = `/update?expense_id=${expenseId}`;
+        window.location.href = `/update/expense?id=${expenseId}`;
       } else {
         alert(response.statusText);
       }
