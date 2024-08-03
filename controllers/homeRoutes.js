@@ -54,6 +54,14 @@ router.get("/expense/:id", withAuth, async (req, res) => {
   res.render("updateExpense", { expense, logged_in: req.session.logged_in });
 });
 
+router.get("/update/income", withAuth, async (req, res) => {
+  const incomeData = await Income.findByPk(req.query.id);
+
+  const income = incomeData.get({ plain: true });
+
+  res.render("updateIncome", { income, logged_in: req.session.id });
+});
+
 router.get("/newIncome", withAuth, async (req, res) => {
   try {
     res.render("newincome", { logged_in: req.session.logged_in });
