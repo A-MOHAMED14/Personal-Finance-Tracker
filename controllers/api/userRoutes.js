@@ -15,12 +15,7 @@ router.post("/newIncome", async (req, res) => {
     return;
   }
 
-  req.session.save(() => {
-    req.session.user_id = userData.id;
-    req.session.logged_in = true;
-
-    res.status(200).json({ message: "New income record created successfully" });
-  });
+  res.status(200).json({ message: "New income record created successfully" });
 });
 
 router.post("/newExpense", async (req, res) => {
@@ -37,12 +32,7 @@ router.post("/newExpense", async (req, res) => {
     return;
   }
 
-  req.session.save(() => {
-    req.session.user_id = userData.id;
-    req.session.logged_in = true;
-
-    res.status(200).json({ message: "New expense record created" });
-  });
+  res.status(200).json({ message: "New expense record created" });
 });
 
 router.post("/signup", async (req, res) => {
