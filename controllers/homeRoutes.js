@@ -20,6 +20,14 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
+router.get("/newIncome", withAuth, async (req, res) => {
+  try {
+    res.render("newincome", { logged_in: req.session.logged_in });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/signup", async (req, res) => {
   try {
     if (req.session.logged_in) {
