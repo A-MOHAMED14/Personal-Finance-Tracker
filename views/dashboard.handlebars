@@ -13,7 +13,7 @@
         <th class="column-name">Amount</th>
       </tr>
       {{#each incomes as |income|}}
-        <tr data-id="{{income.id}}">
+        <tr id="income-tr" data-id="{{income.id}}">
           <td>{{format_date income.date}}</td>
           <td>{{income.source}}</td>
           <td>{{income.amount}}</td>
@@ -34,7 +34,7 @@
         <th class="column-name">Amount</th>
       </tr>
       {{#each expenses as |expense|}}
-        <tr data-id="{{expense.id}}">
+        <tr id="expense-tr" data-id="{{expense.id}}">
           <td>{{format_date expense.date}}</td>
           <td>{{expense.category}}</td>
           <td>{{expense.amount}}</td>
@@ -45,3 +45,4 @@
 {{/if}}
 
 <script src="/js/newTransaction.js"></script>
+<script src="/js/selectedTransaction.js"></script>
