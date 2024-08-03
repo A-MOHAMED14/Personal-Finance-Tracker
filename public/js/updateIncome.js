@@ -22,9 +22,26 @@ const handleIncomeUpdate = async (event) => {
   }
 };
 
+const handleIncomeDeletion = async () => {
+  const incomeId = new URLSearchParams(window.location.search).get("id");
+
+  if (incomeId) {
+    const response = await fetch(`/api/users/delete/income?id=${incomeId}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      document.location.replace("/dashboard");
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
 
 document
   .querySelector("#update-income-form")
   .addEventListener("submit", handleIncomeUpdate);
 
-
+document
+  .querySelector("#delete-income-btn")
+  .addEventListener("click", handleIncomeDeletion);
