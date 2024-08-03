@@ -17,6 +17,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     // Fetch all incomes
     const incomeData = await Income.findAll({
       where: { user_id: req.session.user_id },
+      order: [["date", "ASC"]],
     });
 
     const incomes = incomeData.map((income) => income.get({ plain: true }));
@@ -24,6 +25,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     // Fetch all expenses
     const expenseData = await Expense.findAll({
       where: { user_id: req.session.user_id },
+      order: [["date", "ASC"]],
     });
 
     const expenses = expenseData.map((expense) => expense.get({ plain: true }));
