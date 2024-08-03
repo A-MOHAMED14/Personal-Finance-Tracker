@@ -35,6 +35,25 @@ router.post("/newExpense", async (req, res) => {
   res.status(200).json({ message: "New expense record created" });
 });
 
+router.put("/update/income", async (req, res) => {
+  try {
+    const incomeData = await Income.update(req.body, {
+      where: {
+        id: req.query.id,
+      },
+    });
+
+    if (!incomeData) {
+      res.status(400).json({ message: "Unable to update income record" });
+      return;
+    }
+
+    res.status(200).json({ message: "Income record updated successfully" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post("/signup", async (req, res) => {
   try {
     const userData = await User.create(req.body);
