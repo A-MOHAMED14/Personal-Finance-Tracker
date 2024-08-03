@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models/index.js");
+const { User, Income, Expense } = require("../models/index.js");
 const withAuth = require("../utils/auth.js");
 
 module.exports = router;
@@ -14,7 +14,25 @@ router.get("/", async (req, res) => {
 
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
-    res.render("dashboard", { logged_in: req.session.logged_in });
+    // Fetch all incomes
+    const incomeData = await Income.findAll({
+      where: { user_id: req.session.user_id },
+    });
+
+    const incomes = incomeData.map((income) => income.get({ plain: true }));
+
+    // Fetch all expenses
+    const expenseData = await Expense.findAll({
+      where: { user_id: req.session.user_id },
+    });
+
+    const expenses = expenseData.map((expense) => expense.get({ plain: true }));
+
+    res.render("dashboard", {
+      incomes,
+      expenses,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
