@@ -6,6 +6,7 @@
   --colour5: grey;
   --colour6: #61df65;
   --colour7: #d40000;
+  --colour8: #ff0000;
 }
 
 /* UNIVERSAL STYLING */
@@ -97,7 +98,7 @@ li {
 
 span {
   font-weight: bold;
-  color: red;
+  color: var(--colour8);
 }
 
 #join-app {
@@ -240,7 +241,7 @@ span {
 }
 
 table {
-  width: 35%;
+  /* width: 40%; */
   border: 1px solid black;
 }
 
@@ -258,10 +259,6 @@ th {
 
 td {
   font-size: 1.1rem;
-}
-
-#in {
-  /* color: var(--colour1); */
 }
 
 #new-transaction-buttons {
@@ -403,4 +400,132 @@ td {
 
 #new-expense-btn:hover {
   background-color: var(--colour6);
+}
+
+/* UPDATE INCOME FORM STYLING */
+#update-income-container {
+  display: flex;
+  justify-content: center;
+}
+
+#update-income-form-container {
+  margin-top: 175px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: aliceblue;
+  padding: 30px 60px;
+  border: 3px solid var(--colour5);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px var(--colour5);
+}
+
+#update-income-header {
+  margin-bottom: 40px;
+}
+
+#update-income-form {
+  width: 100%;
+}
+
+#update-income-amount,
+#update-income-source,
+#update-income-date,
+#update-income-btn,
+#delete-income-btn {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+#update-income-btn,
+#delete-income-btn {
+  margin-top: 30px;
+  border-radius: 30px;
+  background-color: var(--colour1);
+  color: var(--colour4);
+  border: none;
+  font-weight: bold;
+}
+
+#update-income-btn:hover {
+  background-color: var(--colour6);
+}
+
+#delete-income-btn {
+  margin-top: 0px;
+  background-color: var(--colour7);
+}
+
+#delete-income-btn:hover {
+  background-color: var(--colour8);
+}
+
+/* UPDATE EXPENSE FORM STYLING */
+#update-expense-container {
+  display: flex;
+  justify-content: center;
+}
+
+#update-expense-form-container {
+  margin-top: 175px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: aliceblue;
+  padding: 30px 60px;
+  border: 3px solid var(--colour5);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px var(--colour5);
+}
+
+#update-expense-header {
+  margin-bottom: 40px;
+}
+
+#update-expense-form {
+  width: 100%;
+}
+
+#update-expense-amount,
+#update-expense-category,
+#update-expense-date,
+#update-expense-btn,
+#delete-expense-btn {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+#update-expense-btn,
+#delete-expense-btn {
+  margin-top: 30px;
+  border-radius: 30px;
+  background-color: var(--colour1);
+  color: var(--colour4);
+  border: none;
+  font-weight: bold;
+}
+
+#update-expense-btn:hover {
+  background-color: var(--colour6);
+}
+
+#delete-expense-btn {
+  margin-top: 0px;
+  background-color: var(--colour7);
+}
+
+#delete-expense-btn:hover {
+  background-color: var(--colour8);
 }
