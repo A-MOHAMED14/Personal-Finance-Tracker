@@ -5,12 +5,12 @@
 
 {{#if incomes}}
   <div class="transactions-container">
-    <h3 class="table-name">Income:</h3>
+    <h3 class="table-name">Income Details</h3>
     <table id="income-table">
       <tr>
         <th class="column-name">Date</th>
         <th class="column-name">Source</th>
-        <th class="column-name">Amount</th>
+        <th class="column-name">Amount (£)</th>
       </tr>
       {{#each incomes as |income|}}
         <tr id="income-tr" data-id="{{income.id}}">
@@ -31,12 +31,12 @@
 
 {{#if expenses}}
   <div class="transactions-container">
-    <h3 class="table-name">Expenses:</h3>
+    <h3 class="table-name">Expense Details</h3>
     <table id="expense-table">
       <tr>
         <th class="column-name">Date</th>
         <th class="column-name">Category</th>
-        <th class="column-name">Amount</th>
+        <th class="column-name">Amount (£) </th>
       </tr>
       {{#each expenses as |expense|}}
         <tr id="expense-tr" data-id="{{expense.id}}">
