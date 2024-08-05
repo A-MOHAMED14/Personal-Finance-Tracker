@@ -9,5 +9,5 @@ const getStarted = async () => {
 };
 
 document
-  .querySelector("#get-started-btn")
+  .querySelector(".get-started-btn")
   .addEventListener("click", getStarted);
