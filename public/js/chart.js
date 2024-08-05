@@ -85,11 +85,11 @@ Chart.defaults.color = "#777";
 const expenseDoughnutChart = new Chart(expenseChart, {
   type: "doughnut",
   data: {
-    labels: ["Groceries", "Parking Ticket", "Technology", "Trainers"],
+    labels: expenseCategories,
     datasets: [
       {
         label: "Expense Amounts",
-        data: [200, 50, 375, 85],
+        data: expenseAmounts,
         backgroundColor: ["red", "orange", "indigo", "green"],
         borderWidth: 1,
         borderColor: "#777",
