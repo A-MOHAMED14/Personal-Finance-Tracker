@@ -1,39 +1,41 @@
 <div id="home-content">
   <div id="app-info-container">
+
     <div id="app-info">
-      <h2 id="greeting">Welcome to FinanceFlow!</h2>
-      <br />
-      <p id="app-purpose">
-        Our Personal Finance Tracker is designed to help you take control of
-        your finances with ease. Whether you want to start saving 💰, reduce
-        debt 💳, or plan for the future 📈, our app provides the tools you need
-        to manage your money effectively.
-      </p>
-      <br />
-      <p id="app-offers">Here’s what FinanceFlow offers: </p>
-      <br />
-      <ul>
-        <li>
-          <span>Track Your Transactions</span>: 📊 Record all your income and
-          expenses to see exactly where your money is going.
-        </li>
-        <li>
-          <span>Detailed Financial Overview</span>: 📋 Get a clear breakdown of
-          your finances by category, helping you understand your spending
-          patterns.
-        </li>
-        <li>
-          <span>Financial Goals Tracking</span>: 🎯 Set and monitor your
-          financial goals to stay motivated and on track.
-        </li>
-      </ul>
+      <h1 id="greeting">Welcome to FinanceFlow!</h1>
 
-      <p id="join-app">
-        Start using FinanceFlow today to take the first step towards financial
-        clarity and success! 🚀
-      </p>
+      <div id="app-summary">
+        <p id="app-purpose">
+          Take control of your finances with ease. Start saving 💰, reduce debt
+          💳, and plan for the future 📈 with our intuitive tools.
+        </p>
 
-      <button id="get-started-btn">Get Started!</button>
+        <div id="app-features">
+          <div class="feature-item">
+            <span class="feature-icon">📊</span>
+            <p class="feature-text">Track income and expenses effortlessly.</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📋</span>
+            <p class="feature-text">Get detailed financial overviews by
+              category.</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎯</span>
+            <p class="feature-text">Set and track your financial goals.</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="call-to-action">Start your journey to financial clarity and
+        success! 🚀</p>
+
+      {{#if logged_in}}
+        <button class="get-started-btn">View Financial Overview</button>
+      {{else}}
+        <button class="get-started-btn">Get Started!</button>
+      {{/if}}
+
     </div>
 
     <div id="finance-img">
