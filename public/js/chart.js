@@ -63,3 +63,7 @@ const incomeBarChart = new Chart(incomeChart, {
     },
   },
 });
+
+const expensesData = JSON.parse(
+  document.querySelector("#expenses-data").textContent
+);
