@@ -14,17 +14,17 @@
       </tr>
       {{#each incomes as |income|}}
         <tr id="income-tr" data-id="{{income.id}}">
-          <td>{{format_date income.date}}</td>
-          <td>{{income.source}}</td>
-          <td>{{income.amount}}</td>
+          <td class="date-data">{{format_date income.date}}</td>
+          <td class="source-data">{{income.source}}</td>
+          <td class="amount-data">{{income.amount}}</td>
         </tr>
       {{/each}}
     </table>
   </div>
+
 {{/if}}
 
 {{#if expenses}}
-  <hr style="width: 35%; margin: 20px" />
   <div class="transactions-container">
     <h3 class="table-name">Expenses:</h3>
     <table id="expense-table">
@@ -35,9 +35,9 @@
       </tr>
       {{#each expenses as |expense|}}
         <tr id="expense-tr" data-id="{{expense.id}}">
-          <td>{{format_date expense.date}}</td>
-          <td>{{expense.category}}</td>
-          <td>{{expense.amount}}</td>
+          <td class="date-data">{{format_date expense.date}}</td>
+          <td class="category-data">{{expense.category}}</td>
+          <td class="amount-data">{{expense.amount}}</td>
         </tr>
       {{/each}}
     </table>
