@@ -91,34 +91,73 @@ header {
   margin: 0 0 0 50px;
 }
 
-li {
-  list-style: none;
-  margin-bottom: 10px;
+#app-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-span {
+#app-summary {
+  text-align: center;
+}
+
+#greeting {
+  font-size: 2.5rem;
+  color: var(--colour7);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#app-purpose {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+#app-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+}
+
+.feature-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+#call-to-action {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  text-align: center;
   font-weight: bold;
-  color: var(--colour8);
 }
 
-#join-app {
-  margin-top: 20px;
-}
-
-#get-started-btn {
-  margin-top: 80px;
-  margin-left: 80px;
+.get-started-btn {
+  display: block;
+  margin: 40px auto;
   padding: 15px 30px;
-  width: 700px;
   background-color: var(--colour1);
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--colour4);
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-#get-started-btn:hover {
+.get-started-btn:hover {
   background-color: var(--colour6);
 }
 
@@ -259,6 +298,19 @@ th {
 
 td {
   font-size: 1.1rem;
+}
+
+.amount-data {
+  text-align: end;
+}
+
+.date-data {
+  text-align: center;
+}
+
+#income-tr:hover,
+#expense-tr:hover {
+  background-color: lightblue;
 }
 
 #new-transaction-buttons {
