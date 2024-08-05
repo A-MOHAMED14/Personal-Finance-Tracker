@@ -18,6 +18,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     const incomeData = await Income.findAll({
       where: { user_id: req.session.user_id },
       order: [["date", "ASC"]],
+      limit: 31,
     });
 
     const incomes = incomeData.map((income) => income.get({ plain: true }));
@@ -26,9 +27,12 @@ router.get("/dashboard", withAuth, async (req, res) => {
     const expenseData = await Expense.findAll({
       where: { user_id: req.session.user_id },
       order: [["date", "ASC"]],
+      limit: 31,
     });
 
     const expenses = expenseData.map((expense) => expense.get({ plain: true }));
+
+    console.log(expenses);
 
     res.render("dashboard", {
       incomes,
