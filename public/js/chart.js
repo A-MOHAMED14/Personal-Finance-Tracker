@@ -38,7 +38,7 @@ const incomeBarChart = new Chart(incomeChart, {
     plugins: {
       title: {
         display: true,
-        text: "Income",
+        text: "Income Overview",
         font: {
           size: 30,
         },
@@ -104,7 +104,7 @@ const expenseDoughnutChart = new Chart(expenseChart, {
     plugins: {
       title: {
         display: true,
-        text: "Expenses",
+        text: "Expense Breakdown",
         font: {
           size: 30,
         },
