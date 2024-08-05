@@ -67,3 +67,11 @@ const incomeBarChart = new Chart(incomeChart, {
 const expensesData = JSON.parse(
   document.querySelector("#expenses-data").textContent
 );
+
+let expenseAmounts = [];
+let expenseCategories = [];
+
+expensesData.forEach((expense) => {
+  expenseAmounts.push(expense.amount);
+  expenseCategories.push(expense.category);
+});
