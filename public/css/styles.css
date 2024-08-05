@@ -581,3 +581,23 @@ td {
 #delete-expense-btn:hover {
   background-color: var(--colour8);
 }
+
+/* CHARTS STYLING */
+.transactions-container,
+.chart-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.chart-container {
+  margin-left: 400px;
+}
+
+.income-chart-container {
+  width: 900px;
+}
+
+.expense-chart-container {
+  width: 650px;
+  margin-left: 150px;
+}
