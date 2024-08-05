@@ -75,3 +75,57 @@ expensesData.forEach((expense) => {
   expenseAmounts.push(expense.amount);
   expenseCategories.push(expense.category);
 });
+
+const expenseChart = document.querySelector("#expenseChart").getContext("2d");
+
+Chart.defaults.font.family = "Lato";
+Chart.defaults.font.size = 18;
+Chart.defaults.color = "#777";
+
+const expenseDoughnutChart = new Chart(expenseChart, {
+  type: "doughnut",
+  data: {
+    labels: ["Groceries", "Parking Ticket", "Technology", "Trainers"],
+    datasets: [
+      {
+        label: "Expense Amounts",
+        data: [200, 50, 375, 85],
+        backgroundColor: ["red", "orange", "indigo", "green"],
+        borderWidth: 1,
+        borderColor: "#777",
+        hoverBorderWidth: 3,
+        hoverBorderColor: "#000",
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      title: {
+        display: true,
+        text: "Expenses",
+        font: {
+          size: 30,
+        },
+      },
+      legend: {
+        display: true,
+        position: "right",
+        labels: {
+          color: "#000",
+        },
+      },
+      tooltip: {
+        enabled: true,
+      },
+    },
+    layout: {
+      padding: {
+        top: 100,
+        right: 0,
+        bottom: 0,
+      },
+    },
+  },
+});
