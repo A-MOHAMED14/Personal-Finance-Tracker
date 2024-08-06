@@ -23,17 +23,19 @@ const handleIncomeUpdate = async (event) => {
 };
 
 const handleIncomeDeletion = async () => {
-  const incomeId = new URLSearchParams(window.location.search).get("id");
+  if (confirm("Are you sure you want to delete this income?")) {
+    const incomeId = new URLSearchParams(window.location.search).get("id");
 
-  if (incomeId) {
-    const response = await fetch(`/api/users/delete/income?id=${incomeId}`, {
-      method: "DELETE",
-    });
+    if (incomeId) {
+      const response = await fetch(`/api/users/delete/income?id=${incomeId}`, {
+        method: "DELETE",
+      });
 
-    if (response.ok) {
-      document.location.replace("/dashboard");
+      if (response.ok) {
+        document.location.replace("/dashboard");
+      }
     } else {
-      alert(response.statusText);
+      return;
     }
   }
 };
