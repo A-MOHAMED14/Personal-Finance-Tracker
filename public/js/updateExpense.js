@@ -23,17 +23,22 @@ const handleExpenseUpdate = async (event) => {
 };
 
 const handleExpenseDeletion = async () => {
-  const expenseId = new URLSearchParams(window.location.search).get("id");
+  if (confirm("Are you sure you want to delete this expense?")) {
+    const expenseId = new URLSearchParams(window.location.search).get("id");
 
-  if (expenseId) {
-    const response = await fetch(`/api/users/delete/expense?id=${expenseId}`, {
-      method: "DELETE",
-    });
+    if (expenseId) {
+      const response = await fetch(
+        `/api/users/delete/expense?id=${expenseId}`,
+        {
+          method: "DELETE",
+        }
+      );
 
-    if (response.ok) {
-      document.location.replace("/dashboard");
+      if (response.ok) {
+        document.location.replace("/dashboard");
+      }
     } else {
-      alert(response.statusText);
+      return;
     }
   }
 };
