@@ -18,3 +18,29 @@
     </form>
   </div>
 </div>
+
+{{#if budgets}}
+  <div id="budget-table-container">
+    <table id="budget-table">
+      <tr>
+        <th class="column-name">Budget Name</th>
+        <th class="column-name">Budgeted Amount (£)</th>
+        <th class="column-name">Amount Spent (£)</th>
+        <th class="column-name">Remaining Budget (£)</th>
+      </tr>
+      {{#each budgets as |budget|}}
+        <tr id="budget-tr" data-id="{{budget.id}}">
+          <td id="budget-name-data">{{budget.name}}</td>
+          <td class="budget-amounts">{{budget.amount}}</td>
+          <td class="budget-amounts">{{budget.expense.amount}}</td>
+          <td class="budget-amounts">{{remaining_budget
+              budget.amount
+              budget.expense.amount
+            }}</td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+{{/if}}
+
+<script src="/js/budgetForm.js"></script>
