@@ -7,7 +7,7 @@ const handleIncomeUpdate = async (event) => {
 
   const incomeId = new URLSearchParams(window.location.search).get("id");
 
-  if ((amount && source && date, incomeId)) {
+  if (amount && source && date && incomeId) {
     const response = await fetch(`/api/users/update/income?id=${incomeId}`, {
       method: "PUT",
       body: JSON.stringify({ amount, source, date }),
