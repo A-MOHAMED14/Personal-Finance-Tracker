@@ -1,0 +1,24 @@
+<div id="update-budget-container">
+  <div id="update-budget-form-container">
+    <div id="update-budget-header"><h1>Create A New Budget</h1></div>
+
+    <form id="update-budget-form">
+      <div id="update-budget-name-field">
+        <label for="update-budget-name"><h4 class="budget-label">Budget Name</h4></label>
+        <input type="text" id="update-budget-name" value={{budget.name}} />
+      </div>
+
+      <div id="update-budget-amount-field">
+        <label for="update-budget-amount">
+          <h4 class="budget-label">Amount</h4></label>
+        <input type="text" id="update-budget-amount" value={{budget.amount}} />
+      </div>
+
+      <button type="submit" id="update-budget-btn">Update Budget</button>
+    </form>
+
+    <button id="delete-budget-btn">Delete</button>
+  </div>
+</div>
+
+<script src="/js/updateBudget.js"></script>
