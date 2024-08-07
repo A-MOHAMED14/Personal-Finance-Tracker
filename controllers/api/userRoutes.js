@@ -50,6 +50,25 @@ router.put("/update/budget", async (req, res) => {
   }
 });
 
+router.delete("/delete/budget", async (req, res) => {
+  try {
+    const budgetData = await Budget.destroy({
+      where: {
+        id: req.query.id,
+      },
+    });
+
+    if (!budgetData) {
+      res.status(400).json({ message: "Unable to delete budget record" });
+      return;
+    }
+
+    res.status(200).json({ message: "Budget record deleted successfully" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post("/newIncome", async (req, res) => {
   const { amount, source, date } = req.body;
   const userData = await Income.create({
