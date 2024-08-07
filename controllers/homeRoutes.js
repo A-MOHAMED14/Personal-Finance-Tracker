@@ -50,6 +50,42 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
+router.get("/budget", withAuth, async (req, res) => {
+  try {
+    const budgetData = await Budget.findAll({
+      where: { user_id: req.session.user_id },
+      include: [
+        {
+          model: Expense,
+          attributes: ["amount"],
+        },
+      ],
+    });
+
+    const budgets = budgetData.map((budget) => budget.get({ plain: true }));
+
+    res.render("budget", { budgets, logged_in: req.session.logged_in });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/budget/:id", withAuth, async (req, res) => {
+  try {
+    const budgetData = await Budget.findByPk(req.params.id);
+
+    const budget = budgetData.get({ plain: true });
+
+    if (!budgetData) {
+      res.status(400).json({ message: "Unable to find budget data " });
+      return;
+    }
+    res.status(200).json({ message: "Budget data found with id" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/income/:id", withAuth, async (req, res) => {
   const incomeData = await Income.findByPk(req.params.id);
 
