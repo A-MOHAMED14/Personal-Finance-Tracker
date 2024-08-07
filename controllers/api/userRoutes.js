@@ -1,5 +1,35 @@
 const router = require("express").Router();
-const { User, Income, Expense } = require("../../models/index.js");
+const { User, Income, Expense, Budget } = require("../../models/index.js");
+
+router.post("/newBudget", async (req, res) => {
+  try {
+    // Fetch the expense associated with the budget
+    const budgetName = req.body.name;
+
+    const expenseData = await Expense.findOne({
+      where: { category: budgetName },
+    });
+    const expense = expenseData.get({ plain: true });
+
+    // Create a new budget
+    const { name, amount } = req.body;
+    const budgetData = await Budget.create({
+      name,
+      amount,
+      expense_id: expense.id,
+      user_id: req.session.user_id,
+    });
+
+    if (!budgetData) {
+      res.status(400).json({ message: "Unable to create new budget record" });
+      return;
+    }
+
+    res.status(200).json({ message: "New budget record created successfully" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.post("/newIncome", async (req, res) => {
   const { amount, source, date } = req.body;
