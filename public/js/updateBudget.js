@@ -21,6 +21,28 @@ const handleBudgetUpdate = async (event) => {
   }
 };
 
+const handleBudgetDeletion = async () => {
+  if (confirm("Are you sure you want to delete this budget?")) {
+    const budgetId = new URLSearchParams(window.location.search).get("id");
+
+    if (budgetId) {
+      const response = await fetch(`/api/users/delete/budget?id=${budgetId}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        document.location.replace("/budget");
+      }
+    } else {
+      return;
+    }
+  }
+};
+
 document
   .querySelector("#update-budget-form")
   .addEventListener("submit", handleBudgetUpdate);
+
+document
+  .querySelector("#delete-budget-btn")
+  .addEventListener("click", handleBudgetDeletion);
