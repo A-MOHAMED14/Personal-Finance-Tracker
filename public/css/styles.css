@@ -650,6 +650,24 @@ td {
   background-color: var(--colour6);
 }
 
+/* EXISTING BUDGETS TABLE STYLING */
+#budget-table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.budget-amounts {
+  text-align: right;
+}
+
+#budget-tr {
+  transition: background-color 0.2s;
+}
+
+#budget-tr:hover {
+  background-color: lightblue;
+}
+
 /* CHARTS STYLING */
 .transactions-container,
 .chart-container {
