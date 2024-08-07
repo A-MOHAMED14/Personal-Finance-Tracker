@@ -1,12 +1,20 @@
 const router = require("express").Router();
-const { User, Income, Expense } = require("../models/index.js");
+const { User, Income, Expense, Budget } = require("../models/index.js");
 const withAuth = require("../utils/auth.js");
 
 module.exports = router;
 
 router.get("/", async (req, res) => {
   try {
-    res.render("homepage", { logged_in: req.session.logged_in });
+    if (req.session.logged_in === true) {
+      const userData = await User.findByPk(req.session.user_id);
+
+      const user = userData.get({ plain: true });
+
+      res.render("homepage", { logged_in: req.session.logged_in, user });
+    } else {
+      res.render("homepage", { logged_in: req.session.logged_in });
+    }
   } catch (err) {
     res.status(500).json(err);
   }
@@ -31,8 +39,6 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
 
     const expenses = expenseData.map((expense) => expense.get({ plain: true }));
-
-    console.log(expenses);
 
     res.render("dashboard", {
       incomes,
@@ -108,7 +114,7 @@ router.get("/signup", async (req, res) => {
 router.get("/login", async (req, res) => {
   try {
     if (req.session.logged_in) {
-      res.redirect("/dashboard");
+      res.redirect("/");
       return;
     }
 
