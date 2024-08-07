@@ -86,6 +86,18 @@ router.get("/budget/:id", withAuth, async (req, res) => {
   }
 });
 
+router.get("/update/budget", withAuth, async (req, res) => {
+  try {
+    const budgetData = await Budget.findByPk(req.query.id);
+
+    const budget = budgetData.get({ plain: true });
+
+    res.render("updateBudget", { budget, logged_in: req.session.id });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/income/:id", withAuth, async (req, res) => {
   const incomeData = await Income.findByPk(req.params.id);
 
