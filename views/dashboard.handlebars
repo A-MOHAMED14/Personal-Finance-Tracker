@@ -1,60 +1,64 @@
-<div id="new-transaction-buttons">
-  <button id="add-income-btn">Add New Income</button>
-  <button id="add-expense-btn">Add New Expense</button>
+<div id="dashboard-page">
+  <div id="dashboard-container">
+    <div id="chart-section">
+      <div class="chart-container">
+        <div class="income-chart-container">
+          <canvas id="incomeChart"></canvas>
+        </div>
+        <div class="expense-chart-container">
+          <canvas id="expenseChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div id="table-section">
+      {{#if incomes}}
+        <div class="transactions-container">
+          <h3 class="table-name">Income Details</h3>
+          <table id="income-table">
+            <tr>
+              <th class="column-name">Date</th>
+              <th class="column-name">Source</th>
+              <th class="column-name">Amount (£)</th>
+            </tr>
+            {{#each incomes as |income|}}
+              <tr id="income-tr" data-id="{{income.id}}">
+                <td class="date-data">{{format_date income.date}}</td>
+                <td class="source-data">{{income.source}}</td>
+                <td class="amount-data">{{income.amount}}</td>
+              </tr>
+            {{/each}}
+          </table>
+        </div>
+      {{/if}}
+
+      {{#if expenses}}
+        <div class="transactions-container">
+          <h3 class="table-name">Expense Details</h3>
+          <table id="expense-table">
+            <tr>
+              <th class="column-name">Date</th>
+              <th class="column-name">Category</th>
+              <th class="column-name">Amount (£)</th>
+            </tr>
+            {{#each expenses as |expense|}}
+              <tr id="expense-tr" data-id="{{expense.id}}">
+                <td class="date-data">{{format_date expense.date}}</td>
+                <td class="category-data">{{expense.category}}</td>
+                <td class="amount-data">{{expense.amount}}</td>
+              </tr>
+            {{/each}}
+          </table>
+        </div>
+      {{/if}}
+    </div>
+
+    <div id="new-transaction-buttons">
+      <button id="add-income-btn">Add New Income</button>
+      <button id="add-expense-btn">Add New Expense</button>
+    </div>
+  </div>
 </div>
-
-{{#if incomes}}
-  <div class="transactions-container">
-    <h3 class="table-name">Income Details</h3>
-    <table id="income-table">
-      <tr>
-        <th class="column-name">Date</th>
-        <th class="column-name">Source</th>
-        <th class="column-name">Amount (£)</th>
-      </tr>
-      {{#each incomes as |income|}}
-        <tr id="income-tr" data-id="{{income.id}}">
-          <td class="date-data">{{format_date income.date}}</td>
-          <td class="source-data">{{income.source}}</td>
-          <td class="amount-data">{{income.amount}}</td>
-        </tr>
-      {{/each}}
-    </table>
-  </div>
-
-  <div class="chart-container">
-    <div class="income-chart-container">
-      <canvas id="incomeChart"></canvas>
-    </div>
-  </div>
-{{/if}}
-
-{{#if expenses}}
-  <div class="transactions-container">
-    <h3 class="table-name">Expense Details</h3>
-    <table id="expense-table">
-      <tr>
-        <th class="column-name">Date</th>
-        <th class="column-name">Category</th>
-        <th class="column-name">Amount (£) </th>
-      </tr>
-      {{#each expenses as |expense|}}
-        <tr id="expense-tr" data-id="{{expense.id}}">
-          <td class="date-data">{{format_date expense.date}}</td>
-          <td class="category-data">{{expense.category}}</td>
-          <td class="amount-data">{{expense.amount}}</td>
-        </tr>
-      {{/each}}
-    </table>
-  </div>
-
-  <div class="chart-container">
-    <div class="expense-chart-container">
-      <canvas id="expenseChart"></canvas>
-    </div>
-  </div>
-{{/if}}
-
 <script src="/js/newTransaction.js"></script>
 <script src="/js/selectedTransaction.js"></script>
 
