@@ -278,62 +278,112 @@ header {
   background-color: var(--colour6);
 }
 
-/* TRANSACTIONS STYLING */
+/* DASHBOARD PAGE STYLING */
+
+/* #dashboard-page {
+  display: flex;
+  justify-content: center;
+} */
+
+#dashboard-container {
+  margin: 20px 50px;
+  /* width: 70%; */
+}
+
+#chart-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.income-chart-container,
+.expense-chart-container {
+  flex: 1;
+  margin-right: 20px;
+  max-width: 700px;
+}
+
+.expense-chart-container {
+  margin-right: 0;
+  margin-top: -95px;
+  max-width: 500px;
+}
+
+#table-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
 .transactions-container {
-  margin: 20px;
+  flex: 1;
+  margin: 0 10px;
 }
 
-.table-name {
-  margin-bottom: 7px;
+#income-table,
+#expense-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-table {
-  /* width: 40%; */
+#income-table th,
+#expense-table th,
+#income-table td,
+#expense-table td {
   border: 1px solid black;
+  padding: 10px 15px;
 }
 
-th,
-td {
-  border: 1px solid black;
-  padding: 10px 20px;
-}
-
-th {
+#income-table th,
+#expense-table th {
   background-color: var(--colour5);
   color: white;
   font-size: 1.25rem;
 }
 
-td {
+#income-table td,
+#expense-table td {
   font-size: 1.1rem;
 }
 
-.amount-data {
-  text-align: end;
+#income-tr {
+  background-color: rgb(220, 255, 220);
 }
 
-.date-data {
-  text-align: center;
+#expense-tr {
+  background-color: rgb(255, 220, 220);
 }
 
 #income-tr:hover,
 #expense-tr:hover {
   background-color: lightblue;
+  transition: background-color 0.5s;
 }
 
 #new-transaction-buttons {
-  margin: 50 0 10 20;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 #add-income-btn,
 #add-expense-btn {
-  padding: 20px 35px;
+  padding: 10px 20px;
   border: none;
   border-radius: 20px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin: 0 15px 10px 0;
-  color: var(--colour4);
+  margin: 0 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 #add-income-btn {
@@ -656,12 +706,34 @@ td {
   justify-content: center;
 }
 
+#budget-table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#budget-table th,
+#budget-table td {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+#budget-table th {
+  background-color: var(--colour5);
+  color: white;
+  font-size: 1.25rem;
+}
+
+#budget-table td {
+  font-size: 1.1rem;
+}
+
 .budget-amounts {
   text-align: right;
 }
 
 #budget-tr {
-  transition: background-color 0.2s;
+  background-color: rgb(255, 239, 220);
+  transition: background-color 0.5s;
 }
 
 #budget-tr:hover {
@@ -732,24 +804,4 @@ td {
 
 #delete-budget-btn:hover {
   background-color: var(--colour8);
-}
-
-/* CHARTS STYLING */
-.transactions-container,
-.chart-container {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.chart-container {
-  margin-left: 400px;
-}
-
-.income-chart-container {
-  width: 900px;
-}
-
-.expense-chart-container {
-  width: 650px;
-  margin-left: 150px;
 }
