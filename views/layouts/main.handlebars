@@ -13,9 +13,10 @@
 
       <div id="nav-container">
         <nav id="nav-links">
-          <a href="/">Home</a>
-          <a href="/dashboard">Dashboard</a>
+          <a href="/" id="homepage">Home</a>
           {{#if logged_in}}
+            <a href="/budget">Budget</a>
+            <a href="/dashboard">Overview</a>
             <a href="" id="logout-btn">Logout</a>
           {{else}}
             <a href="/login">Login</a>
@@ -28,12 +29,14 @@
       {{{body}}}
     </main>
 
-    <footer></footer>
+    <footer>
+    </footer>
 
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/js/chart.js"></script>
+    <script src="/js/savingsChart.js"></script>
   </body>
 </html>
