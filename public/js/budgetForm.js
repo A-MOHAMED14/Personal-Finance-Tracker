@@ -14,7 +14,7 @@ const newBudget = async (event) => {
     if (response.ok) {
       document.location.replace("/budget");
     } else {
-      alert(response.statusText);
+      alert("Budget name must match the Expense category");
     }
   }
 };
