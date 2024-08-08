@@ -11,9 +11,33 @@ router.get("/", async (req, res) => {
 
       const user = userData.get({ plain: true });
 
-      res.render("homepage", { logged_in: req.session.logged_in, user });
+      const totalIncome = await Income.sum("amount", {
+        where: { user_id: req.session.user_id },
+        limit: 31,
+      });
+
+      const totalExpense = await Expense.sum("amount", {
+        where: { user_id: req.session.user_id },
+        limit: 31,
+      });
+
+      const totalBudget = await Budget.sum("amount", {
+        where: { user_id: req.session.user_id },
+      });
+
+      const remainingBalance = totalIncome - totalExpense;
+
+      res.render("homepage", {
+        logged_in: req.session.logged_in,
+        user,
+        totalExpense,
+        totalBudget,
+        remainingBalance,
+      });
     } else {
-      res.render("homepage", { logged_in: req.session.logged_in });
+      res.render("homepage", {
+        logged_in: req.session.logged_in,
+      });
     }
   } catch (err) {
     res.status(500).json(err);
