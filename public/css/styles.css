@@ -1,6 +1,6 @@
 :root {
   --colour1: #4caf50;
-  --colour2: #2196f3;
+  --colour2: #4c31ff;
   --colour3: #ffc107;
   --colour4: #ffffff;
   --colour5: grey;
@@ -29,13 +29,13 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 0px 30px 0px;
-  background-color: #2196f3;
+  padding: 30px 0px 30px 0px;
+  background-color: var(--colour2);
   box-shadow: 2px 2px 3px var(--colour5);
 }
 
 #finance-flow {
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--colour4);
   margin-left: 100px;
 }
@@ -81,14 +81,14 @@ header {
   margin-top: 110px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 #app-info-container {
   display: flex;
   align-items: center;
-  width: 85%;
-  margin: 0 0 0 50px;
+  /* width: 85%; */
+  margin: 0 0 0 85px;
 }
 
 #app-info {
@@ -102,58 +102,56 @@ header {
 }
 
 .greeting {
-  font-size: 2.5rem;
-  color: var(--colour7);
-  margin-bottom: 20px;
-  text-align: center;
+  font-size: 2rem;
+  margin: 0px;
+  text-align: left;
 }
 
-.subheading {
-  font-size: 2rem;
-  color: rgb(55, 0, 255);
-  margin-bottom: 50px;
-  text-align: center;
+.loggedin-subheading {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+#username {
+  color: var(--colour2);
+}
+
+.subheading,
+.finances-subheading {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.finances-subheading {
+  margin-top: -30px;
+}
+
+#finances-heading {
+  color: var(--colour2);
+}
+
+#app-overview {
+  margin-top: -20px;
 }
 
 #app-purpose {
   font-size: 1.5rem;
-  margin-bottom: 40px;
-  line-height: 1.5;
-}
-
-#app-features {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.feature-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.1rem;
-}
-
-.feature-icon {
-  font-size: 2rem;
-}
-
-.feature-text {
-  font-size: 1.25rem;
-  font-weight: 500;
+  line-height: 1.7;
 }
 
 #call-to-action {
-  margin-top: 30px;
-  font-size: 1.3rem;
-  text-align: center;
-  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#signup-div {
+  display: flex;
+  justify-content: flex-start !important;
 }
 
 .get-started-btn {
   display: block;
-  margin: 40px auto;
+  margin: 40px 0px;
   padding: 15px 30px;
   background-color: var(--colour1);
   font-size: 1.5rem;
@@ -171,6 +169,41 @@ header {
 
 #finance-img {
   margin-bottom: 90px;
+}
+
+.budget-chart-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#budgetChart {
+  max-height: 150px;
+  max-width: 150px;
+  margin-top: 30px;
+}
+
+#financial-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0px 20px;
+  gap: 5px;
+}
+
+#totalExpense-amount {
+  color: var(--colour7);
+}
+
+#total-savings-amount {
+  color: var(--colour2);
+}
+
+#budget-note,
+#savings-note {
+  text-align: center;
 }
 
 /* SIGN UP STYLING */
