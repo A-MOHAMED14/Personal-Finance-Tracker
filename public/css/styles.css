@@ -253,6 +253,7 @@ header {
   color: var(--colour4);
   border: none;
   font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 #signup-btn:hover {
@@ -307,6 +308,7 @@ header {
   color: var(--colour4);
   border: none;
   font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 #login-btn:hover {
@@ -672,27 +674,29 @@ header {
 #budget-container {
   display: flex;
   justify-content: center;
+  padding: 20px;
   margin-bottom: 50px;
 }
 
 #budget-form-container {
+  width: 90%;
+  max-width: 700px;
   margin-top: 50px;
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   background-color: aliceblue;
-  padding: 30px 60px;
+  padding: 30px;
   border: 3px solid var(--colour5);
   border-radius: 10px;
   box-shadow: 3px 3px 10px var(--colour5);
 }
 
 #budget-header {
-  font-size: 1.2rem;
-  margin-bottom: 50px;
+  font-size: 1.3rem;
+  margin-bottom: 45px;
 }
 
 #budget-form {
@@ -715,7 +719,7 @@ header {
 }
 
 #budget-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 30px;
   background-color: var(--colour1);
   color: var(--colour4);
@@ -732,6 +736,7 @@ header {
 #budget-table-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 #budget-table {
@@ -931,9 +936,10 @@ header {
     height: auto;
   }
 
-  /* SIGN UP FORM, LOGIN FORM */
+  /* SIGN UP FORM, LOGIN FORM, BUDGET FORM */
   #login-form-container,
-  #signup-form-container {
+  #signup-form-container,
+  #budget-form-container {
     width: 95%;
   }
 
@@ -943,13 +949,20 @@ header {
     font-size: 1.35rem;
   }
 
+  #budget-header {
+    text-align: center;
+  }
+
   #login-email,
   #login-password,
   #login-btn,
   #signup-name,
   #signup-email,
   #signup-password,
-  #signup-btn {
+  #signup-btn,
+  #budget-amount,
+  #budget-name,
+  #budget-btn {
     font-size: 1.1rem;
   }
 }
@@ -1001,7 +1014,7 @@ header {
     font-size: 1.1rem;
   }
 
-  /* SIGN UP FORM, LOGIN FORM */
+  /* SIGN UP FORM, LOGIN FORM, BUDGET-FORM */
   #login-form-container,
   #signup-form-container {
     padding: 15px;
@@ -1013,13 +1026,21 @@ header {
     font-size: 1.25rem;
   }
 
+  #budget-header {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
   #login-email,
   #login-password,
   #login-btn,
   #signup-name,
   #signup-email,
   #signup-password,
-  #signup-btn {
+  #signup-btn,
+  #budget-amount,
+  #budget-name,
+  #budget-btn {
     padding: 10px;
     font-size: 1rem;
   }
