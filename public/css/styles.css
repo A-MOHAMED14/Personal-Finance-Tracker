@@ -777,27 +777,28 @@ header {
 #update-budget-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  padding: 20px;
 }
 
 #update-budget-form-container {
+  width: 90%;
+  max-width: 700px;
   margin-top: 50px;
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   background-color: aliceblue;
-  padding: 30px 60px;
+  padding: 20px;
   border: 3px solid var(--colour5);
   border-radius: 10px;
   box-shadow: 3px 3px 10px var(--colour5);
 }
 
 #update-budget-header {
-  font-size: 1.2rem;
-  margin-bottom: 50px;
+  font-size: 1.3rem;
+  margin-bottom: 40px;
 }
 
 #update-budget-form {
@@ -809,15 +810,15 @@ header {
 #update-budget-btn,
 #delete-budget-btn {
   width: 100%;
-  padding: 10px 8px;
+  padding: 12px 8px;
   font-size: 1.2rem;
   border-radius: 7px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 #update-budget-btn,
 #delete-budget-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 30px;
   background-color: var(--colour1);
   color: var(--colour4);
@@ -939,7 +940,8 @@ header {
   /* SIGN UP FORM, LOGIN FORM, BUDGET FORM */
   #login-form-container,
   #signup-form-container,
-  #budget-form-container {
+  #budget-form-container,
+  #update-budget-container {
     width: 95%;
   }
 
@@ -949,8 +951,10 @@ header {
     font-size: 1.35rem;
   }
 
-  #budget-header {
+  #budget-header,
+  #update-budget-header {
     text-align: center;
+    font-size: 1.2rem;
   }
 
   #login-email,
@@ -962,7 +966,11 @@ header {
   #signup-btn,
   #budget-amount,
   #budget-name,
-  #budget-btn {
+  #budget-btn,
+  #update-budget-amount,
+  #update-budget-name,
+  #update-budget-btn,
+  #delete-budget-btn {
     font-size: 1.1rem;
   }
 }
@@ -1016,7 +1024,8 @@ header {
 
   /* SIGN UP FORM, LOGIN FORM, BUDGET-FORM */
   #login-form-container,
-  #signup-form-container {
+  #signup-form-container,
+  #update-budget-container {
     padding: 15px;
   }
 
@@ -1026,8 +1035,9 @@ header {
     font-size: 1.25rem;
   }
 
-  #budget-header {
-    font-size: 1.2rem;
+  #budget-header,
+  #update-budget-header {
+    font-size: 1rem;
     text-align: center;
   }
 
@@ -1040,7 +1050,11 @@ header {
   #signup-btn,
   #budget-amount,
   #budget-name,
-  #budget-btn {
+  #budget-btn,
+  #update-budget-amount,
+  #update-budget-name,
+  #update-budget-btn,
+  #delete-budget-btn {
     padding: 10px;
     font-size: 1rem;
   }
