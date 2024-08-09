@@ -43,13 +43,15 @@
       {{/if}}
 
       {{#if logged_in}}
-        <button class="get-started-btn">View Financial Overview</button>
+        <div class="signup-div">
+          <button class="get-started-btn">View Financial Overview</button>
+        </div>
+
       {{else}}
-        <div id="signup-div">
+        <div class="signup-div">
           <button class="get-started-btn">Get Started!</button>
         </div>
       {{/if}}
-
     </div>
 
     <div id="finance-img">
