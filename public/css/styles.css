@@ -436,138 +436,104 @@ header {
   box-shadow: 3px 3px 5px black;
 }
 
-/* NEW INCOME FORM STYLING */
-#new-income-container {
+/* NEW INCOME & EXPENSE FORM STYLING */
+#new-income-container,
+#new-expense-container {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
-#new-income-form-container {
-  margin-top: 175px;
-  width: 40%;
+#new-income-form-container,
+#new-expense-form-container {
+  width: 90%;
+  max-width: 700px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   background-color: aliceblue;
-  padding: 30px 60px;
+  padding: 20px;
   border: 3px solid var(--colour5);
   border-radius: 10px;
   box-shadow: 3px 3px 10px var(--colour5);
 }
 
-#new-income-header {
-  margin-bottom: 40px;
+#new-income-header,
+#new-expense-header {
+  margin-bottom: 20px;
 }
 
-#new-income-form {
+#new-income-form,
+#new-expense-form {
   width: 100%;
 }
 
 #new-income-amount,
 #new-income-source,
 #new-income-date,
-#new-income-btn {
-  width: 100%;
-  padding: 15px 10px;
-  font-size: 1.5rem;
-  border-radius: 7px;
-  margin-bottom: 15px;
-}
-
-#new-income-btn {
-  margin-top: 30px;
-  border-radius: 30px;
-  background-color: var(--colour1);
-  color: var(--colour4);
-  border: none;
-  font-weight: bold;
-}
-
-#new-income-btn:hover {
-  background-color: var(--colour6);
-}
-
-/* NEW EXPENSE FORM STYLING */
-#new-expense-container {
-  display: flex;
-  justify-content: center;
-}
-
-#new-expense-form-container {
-  margin-top: 175px;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-color: aliceblue;
-  padding: 30px 60px;
-  border: 3px solid var(--colour5);
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px var(--colour5);
-}
-
-#new-expense-header {
-  margin-bottom: 40px;
-}
-
-#new-expense-form {
-  width: 100%;
-}
-
+#new-income-btn,
 #new-expense-amount,
 #new-expense-category,
 #new-expense-date,
 #new-expense-btn {
   width: 100%;
-  padding: 15px 10px;
-  font-size: 1.5rem;
+  padding: 12px 8px;
+  font-size: 1.2rem;
   border-radius: 7px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
+#new-income-btn,
 #new-expense-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 30px;
   background-color: var(--colour1);
   color: var(--colour4);
   border: none;
   font-weight: bold;
+  transition: background-color 0.3s;
 }
 
+#new-income-btn:hover,
 #new-expense-btn:hover {
   background-color: var(--colour6);
 }
 
-/* UPDATE INCOME FORM STYLING */
-#update-income-container {
+/* UPDATE INCOME & EXPENSE FORM STYLING */
+#update-income-container,
+#update-expense-container {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
-#update-income-form-container {
-  margin-top: 175px;
-  width: 40%;
+#update-income-form-container,
+#update-expense-form-container {
+  width: 90%;
+  max-width: 700px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   background-color: aliceblue;
-  padding: 30px 60px;
+  padding: 20px;
   border: 3px solid var(--colour5);
   border-radius: 10px;
   box-shadow: 3px 3px 10px var(--colour5);
 }
 
-#update-income-header {
-  margin-bottom: 40px;
+#update-income-header,
+#update-expense-header {
+  margin-bottom: 20px;
 }
 
-#update-income-form {
+#update-income-form,
+#update-expense-form {
   width: 100%;
 }
 
@@ -575,97 +541,44 @@ header {
 #update-income-source,
 #update-income-date,
 #update-income-btn,
-#delete-income-btn {
-  width: 100%;
-  padding: 15px 10px;
-  font-size: 1.5rem;
-  border-radius: 7px;
-  margin-bottom: 15px;
-}
-
-#update-income-btn,
-#delete-income-btn {
-  margin-top: 30px;
-  border-radius: 30px;
-  background-color: var(--colour1);
-  color: var(--colour4);
-  border: none;
-  font-weight: bold;
-}
-
-#update-income-btn:hover {
-  background-color: var(--colour6);
-}
-
-#delete-income-btn {
-  margin-top: 0px;
-  background-color: var(--colour7);
-}
-
-#delete-income-btn:hover {
-  background-color: var(--colour8);
-}
-
-/* UPDATE EXPENSE FORM STYLING */
-#update-expense-container {
-  display: flex;
-  justify-content: center;
-}
-
-#update-expense-form-container {
-  margin-top: 175px;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-color: aliceblue;
-  padding: 30px 60px;
-  border: 3px solid var(--colour5);
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px var(--colour5);
-}
-
-#update-expense-header {
-  margin-bottom: 40px;
-}
-
-#update-expense-form {
-  width: 100%;
-}
-
+#delete-income-btn,
 #update-expense-amount,
 #update-expense-category,
 #update-expense-date,
 #update-expense-btn,
 #delete-expense-btn {
   width: 100%;
-  padding: 15px 10px;
-  font-size: 1.5rem;
+  padding: 12px 8px;
+  font-size: 1.2rem;
   border-radius: 7px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
+#update-income-btn,
+#delete-income-btn,
 #update-expense-btn,
 #delete-expense-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 30px;
   background-color: var(--colour1);
   color: var(--colour4);
   border: none;
   font-weight: bold;
+  transition: background-color 0.3s;
 }
 
+#update-income-btn:hover,
 #update-expense-btn:hover {
   background-color: var(--colour6);
 }
 
+#delete-income-btn,
 #delete-expense-btn {
   margin-top: 0px;
   background-color: var(--colour7);
 }
 
+#delete-income-btn:hover,
 #delete-expense-btn:hover {
   background-color: var(--colour8);
 }
@@ -937,22 +850,27 @@ header {
     height: auto;
   }
 
-  /* SIGN UP FORM, LOGIN FORM, BUDGET FORM */
+  /* SIGN UP, LOGIN, BUDGET, INCOME & EXPENSE FORMS  */
   #login-form-container,
   #signup-form-container,
   #budget-form-container,
-  #update-budget-container {
+  #update-budget-container,
+  #new-income-container,
+  #new-expense-container,
+  #update-income-container,
+  #update-expense-container {
     width: 95%;
   }
 
   #login-header,
-  #signup-header {
-    margin-bottom: 15px;
-    font-size: 1.35rem;
-  }
-
+  #signup-header,
   #budget-header,
-  #update-budget-header {
+  #update-budget-header,
+  #new-income-header,
+  #new-expense-header,
+  #update-income-header,
+  #update-expense-header {
+    margin-bottom: 15px;
     text-align: center;
     font-size: 1.2rem;
   }
@@ -970,7 +888,25 @@ header {
   #update-budget-amount,
   #update-budget-name,
   #update-budget-btn,
-  #delete-budget-btn {
+  #delete-budget-btn,
+  #new-income-amount,
+  #new-income-source,
+  #new-income-date,
+  #new-income-btn,
+  #new-expense-amount,
+  #new-expense-category,
+  #new-expense-date,
+  #new-expense-btn,
+  #update-income-amount,
+  #update-income-source,
+  #update-income-date,
+  #update-income-btn,
+  #delete-income-btn,
+  #update-expense-amount,
+  #update-expense-category,
+  #update-expense-date,
+  #update-expense-btn,
+  #delete-expense-btn {
     font-size: 1.1rem;
   }
 }
@@ -1022,21 +958,26 @@ header {
     font-size: 1.1rem;
   }
 
-  /* SIGN UP FORM, LOGIN FORM, BUDGET-FORM */
+  /* SIGN UP, LOGIN, BUDGET, INCOME & EXPENSE FORMS */
   #login-form-container,
   #signup-form-container,
-  #update-budget-container {
+  #update-budget-container,
+  #new-income-container,
+  #new-expense-container,
+  #update-income-container,
+  #update-expense-container {
     padding: 15px;
   }
 
   #login-header,
-  #signup-header {
-    margin-bottom: 15px;
-    font-size: 1.25rem;
-  }
-
+  #signup-header,
   #budget-header,
-  #update-budget-header {
+  #update-budget-header,
+  #new-income-header,
+  #new-expense-header,
+  #update-income-header,
+  #update-expense-header {
+    margin-bottom: 15px;
     font-size: 1rem;
     text-align: center;
   }
@@ -1054,7 +995,25 @@ header {
   #update-budget-amount,
   #update-budget-name,
   #update-budget-btn,
-  #delete-budget-btn {
+  #delete-budget-btn,
+  #new-income-amount,
+  #new-income-source,
+  #new-income-date,
+  #new-income-btn,
+  #new-expense-amount,
+  #new-expense-category,
+  #new-expense-date,
+  #new-expense-btn,
+  #update-income-amount,
+  #update-income-source,
+  #update-income-date,
+  #update-income-btn,
+  #delete-income-btn,
+  #update-expense-amount,
+  #update-expense-category,
+  #update-expense-date,
+  #update-expense-btn,
+  #delete-expense-btn {
     padding: 10px;
     font-size: 1rem;
   }
