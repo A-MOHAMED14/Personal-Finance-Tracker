@@ -208,25 +208,27 @@ header {
 #signup-container {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 #signup-form-container {
-  margin-top: 175px;
-  width: 40%;
+  width: 90%;
+  max-width: 700px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   background-color: aliceblue;
-  padding: 30px 60px;
+  padding: 20px;
   border: 3px solid var(--colour5);
   border-radius: 10px;
   box-shadow: 3px 3px 10px var(--colour5);
 }
 
 #signup-header {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 #signup-form {
@@ -238,14 +240,14 @@ header {
 #signup-password,
 #signup-btn {
   width: 100%;
-  padding: 15px 10px;
-  font-size: 1.5rem;
+  padding: 12px 8px;
+  font-size: 1.2rem;
   border-radius: 7px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 #signup-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 30px;
   background-color: var(--colour1);
   color: var(--colour4);
@@ -929,19 +931,25 @@ header {
     height: auto;
   }
 
-  /* LOGIN FORM */
-  #login-form-container {
+  /* SIGN UP FORM, LOGIN FORM */
+  #login-form-container,
+  #signup-form-container {
     width: 95%;
   }
 
-  #login-header {
+  #login-header,
+  #signup-header {
     margin-bottom: 15px;
     font-size: 1.35rem;
   }
 
   #login-email,
   #login-password,
-  #login-btn {
+  #login-btn,
+  #signup-name,
+  #signup-email,
+  #signup-password,
+  #signup-btn {
     font-size: 1.1rem;
   }
 }
@@ -993,19 +1001,25 @@ header {
     font-size: 1.1rem;
   }
 
-  /* LOGIN FORM */
-  #login-form-container {
+  /* SIGN UP FORM, LOGIN FORM */
+  #login-form-container,
+  #signup-form-container {
     padding: 15px;
   }
 
-  #login-header {
+  #login-header,
+  #signup-header {
     margin-bottom: 15px;
     font-size: 1.25rem;
   }
 
   #login-email,
   #login-password,
-  #login-btn {
+  #login-btn,
+  #signup-name,
+  #signup-email,
+  #signup-password,
+  #signup-btn {
     padding: 10px;
     font-size: 1rem;
   }
