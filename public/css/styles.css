@@ -261,25 +261,27 @@ header {
 #login-container {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 #login-form-container {
-  margin-top: 175px;
-  width: 40%;
+  width: 90%;
+  max-width: 700px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   background-color: aliceblue;
-  padding: 30px 60px;
+  padding: 20px;
   border: 3px solid var(--colour5);
   border-radius: 10px;
   box-shadow: 3px 3px 10px var(--colour5);
 }
 
 #login-header {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 #login-form {
@@ -290,14 +292,14 @@ header {
 #login-password,
 #login-btn {
   width: 100%;
-  padding: 15px 10px;
-  font-size: 1.5rem;
+  padding: 12px 8px;
+  font-size: 1.2rem;
   border-radius: 7px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 #login-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 30px;
   background-color: var(--colour1);
   color: var(--colour4);
@@ -378,11 +380,11 @@ header {
 }
 
 #income-tr {
-  background-color: rgb(220, 255, 220);
+  background-color: #dcffdc;
 }
 
 #expense-tr {
-  background-color: rgb(255, 220, 220);
+  background-color: #ffdcdb;
 }
 
 #income-tr:hover,
@@ -926,6 +928,22 @@ header {
     width: 100%;
     height: auto;
   }
+
+  /* LOGIN FORM */
+  #login-form-container {
+    width: 95%;
+  }
+
+  #login-header {
+    margin-bottom: 15px;
+    font-size: 1.35rem;
+  }
+
+  #login-email,
+  #login-password,
+  #login-btn {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -973,5 +991,22 @@ header {
 
   .get-started-btn {
     font-size: 1.1rem;
+  }
+
+  /* LOGIN FORM */
+  #login-form-container {
+    padding: 15px;
+  }
+
+  #login-header {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+  }
+
+  #login-email,
+  #login-password,
+  #login-btn {
+    padding: 10px;
+    font-size: 1rem;
   }
 }
