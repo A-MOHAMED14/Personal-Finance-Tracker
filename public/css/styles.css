@@ -654,7 +654,8 @@ header {
 
 #budget-table {
   border-collapse: collapse;
-  width: 70%;
+  width: 90%;
+  margin: 0px, 20px;
 }
 
 #budget-table th,
@@ -677,12 +678,12 @@ header {
   text-align: right;
 }
 
-#budget-tr {
+.budget-tr {
   background-color: rgb(255, 239, 220);
   transition: background-color 0.5s;
 }
 
-#budget-tr:hover {
+.budget-tr:hover {
   background-color: lightblue;
 }
 
@@ -909,6 +910,15 @@ header {
   #delete-expense-btn {
     font-size: 1.1rem;
   }
+
+  /* EXISTING BUDGETS TABLE */
+  #budget-table th {
+    font-size: 1.1rem;
+  }
+
+  #budget-table td {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1016,5 +1026,45 @@ header {
   #delete-expense-btn {
     padding: 10px;
     font-size: 1rem;
+  }
+
+  /* EXISTING BUDGETS TABLE */
+  #budget-table-container {
+    margin-top: 0px, 20px;
+  }
+
+  #budget-table {
+    table-layout: auto;
+  }
+
+  #budget-table th {
+    font-size: 0.9rem;
+  }
+
+  #budget-table td {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 450px) {
+  /* EXISTING BUDGETS TABLE */
+  #budget-header {
+    font-size: 0.8rem;
+  }
+
+  #budget-table-container {
+    margin-top: 0px, 30px;
+  }
+
+  #budget-table {
+    table-layout: auto;
+  }
+
+  #budget-table th {
+    font-size: 0.6rem;
+  }
+
+  #budget-table td {
+    font-size: 0.6rem;
   }
 }
