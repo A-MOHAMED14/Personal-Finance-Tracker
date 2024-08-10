@@ -328,7 +328,7 @@ header {
 
 .chart-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin-top: 40px;
 }
@@ -678,12 +678,12 @@ header {
   text-align: right;
 }
 
-.budget-tr {
+#budget-tr {
   background-color: rgb(255, 239, 220);
   transition: background-color 0.5s;
 }
 
-.budget-tr:hover {
+#budget-tr:hover {
   background-color: lightblue;
 }
 
@@ -755,6 +755,7 @@ header {
 }
 
 /* RESPONSIVE DESIGN */
+
 @media (max-width: 1485px) {
   /* HOME PAGE */
   #app-info-container {
@@ -818,6 +819,25 @@ header {
 
   #nav-links {
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 1325px) {
+  /* DASHBOARD PAGE */
+  .chart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .income-chart-container,
+  .expense-chart-container {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .expense-chart-container {
+    margin-top: 0px;
   }
 }
 
@@ -918,6 +938,12 @@ header {
 
   #budget-table td {
     font-size: 0.9rem;
+  }
+
+  /* DASHBOARD PAGE */
+  #table-section {
+    flex-direction: column;
+    gap: 40px;
   }
 }
 
@@ -1066,5 +1092,16 @@ header {
 
   #budget-table td {
     font-size: 0.6rem;
+  }
+
+  /* DAHSBOARD PAGE */
+  #income-table th,
+  #expense-table th {
+    font-size: 1rem;
+  }
+
+  #income-table td,
+  #expense-table td {
+    font-size: 0.8rem;
   }
 }
