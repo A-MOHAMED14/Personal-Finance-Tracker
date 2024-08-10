@@ -40,6 +40,10 @@ header {
   margin-left: 100px;
 }
 
+#finance-flow img {
+  vertical-align: middle;
+}
+
 #nav-container {
   display: flex;
   flex-direction: column;
