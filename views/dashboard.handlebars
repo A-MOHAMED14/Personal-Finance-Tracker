@@ -1,15 +1,20 @@
 <div id="dashboard-page">
   <div id="dashboard-container">
-    <div id="chart-section">
-      <div class="chart-container">
-        <div class="income-chart-container">
-          <canvas id="incomeChart"></canvas>
+
+    {{#if incomes}}
+      {{#if expenses}}
+        <div id="chart-section">
+          <div class="chart-container">
+            <div class="income-chart-container">
+              <canvas id="incomeChart"></canvas>
+            </div>
+            <div class="expense-chart-container">
+              <canvas id="expenseChart"></canvas>
+            </div>
+          </div>
         </div>
-        <div class="expense-chart-container">
-          <canvas id="expenseChart"></canvas>
-        </div>
-      </div>
-    </div>
+      {{/if}}
+    {{/if}}
 
     <div id="table-section">
       {{#if incomes}}
