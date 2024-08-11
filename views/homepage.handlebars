@@ -32,13 +32,15 @@
           </div>
         </div>
       {{else}}
-        <div id="app-overview">
-          <p id="app-purpose">
-            Mastering your budget can save you thousands each year.
-          </p>
+        {{#unless logged_in}}
+          <div id="app-overview">
+            <p id="app-purpose">
+              Mastering your budget can save you thousands each year.
+            </p>
 
-          <p id="call-to-action">Start your journey today 🚀</p>
-        </div>
+            <p id="call-to-action">Start your journey today 🚀</p>
+          </div>
+        {{/unless}}
 
       {{/if}}
 
