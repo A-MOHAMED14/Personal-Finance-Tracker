@@ -1,5 +1,7 @@
 # Project 2: Personal Finance Tracker Application
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 ## Overview
 
 This application helps users manage their finances by tracking income, expenses, and budgets. It provides visual insights through charts and graphs to simplify financial planning and budgeting.
@@ -76,3 +78,7 @@ git push origin feature/your-feature-name
 ```
 
 5. Open a pull request to the main repository, describing your changes in detail.
+
+## 📄 License
+
+This project is licensed under the MIT License. You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, provided that the original copyright notice and permission notice are included in all copies or substantial portions of the software. For more details, see the MIT [LICENSE](https://opensource.org/licenses/MIT) file.
