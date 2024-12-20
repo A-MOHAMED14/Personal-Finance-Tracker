@@ -6,6 +6,47 @@
 
 This application helps users manage their finances by tracking income, expenses, and budgets. It provides visual insights through charts and graphs to simplify financial planning and budgeting.
 
+## Table of Contents
+
+- [🎥 Application Demo ](#🎥-application-demo)
+- [🚀Installation ](#🚀-installation)
+- [🏗️ Usage](#🏗️-usage)
+- [⚒️ Technologies Used](#⚒️-technologies-used)
+- [🤝 Contributing ](#🤝-contributing)
+- [📄 License ](#📄-license)
+- [❓ Questions ](#❓-questions)
+
+## 🎥 Application Demo
+
+As you can see in the following animation, a user can view their their financial summary, a break down of their income & expenses, and see if their on track with their budgeting:
+
+![Animation shows an overview of the application.](./public/demos/app.gif)
+
+The user can add, remove, and update income and expenses. The income & expense is added to the bar and doughnut charts respectively using chart.js and are updated in real-time, as demonstrated in the following animation:
+
+![Animation shows an overview of the application.](./public/demos/overview.gif)
+
+The user can set a budegt goal for the month and see if they are on track. Users can also update and delete a budget as shown in the following animation:
+
+![Animation shows an overview of the application.](./public/demos/budget.gif)
+
+## ⚒️ Technologies Used
+
+#### Backend:
+
+- **Express**: Web framework for Node.js.
+- **Sequelize**: ORM for SQL databases.
+- **pg**: PostgreSQL client for Node.js.
+- **bcrypt**: Password hashing library.
+- **dotenv**: Environment variable manager.
+- **connect-session-sequelize**: Session store for Sequelize.
+- **express-session**: Session middleware for Express.
+- **express-handlebars**: Templating engine for Express.
+
+#### Development Tools:
+
+- **nodemon**: Utility that monitors for changes and restarts the server.
+
 ## 🚀 Installation
 
 1. Clone the Repository:
